@@ -1,0 +1,864 @@
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_0/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_0/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v4_2/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+17:56:36 **** Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22916	   1152	  22564	  46632	   b628	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+17:56:57 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+T:\accel_2.0\accel.sdk\accelerometer\Debug/../src/helloworld.c:119: undefined reference to `sin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [accelerometer.elf] Error 1
+17:57:16 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+T:\accel_2.0\accel.sdk\accelerometer\Debug/../src/helloworld.c:119: undefined reference to `asin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [accelerometer.elf] Error 1
+17:58:38 **** Clean-only build of configuration Debug for project accelerometer ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  accelerometer.elf.size  accelerometer.elf
+' '
+17:58:39 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66068	   2432	  22636	  91136	  16400	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+17:58:47 **** Clean-only build of configuration Debug for project accelerometer ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  accelerometer.elf.size  accelerometer.elf
+' '
+17:58:48 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66068	   2432	  22636	  91136	  16400	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+17:59:25 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+18:00:30 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+18:02:21 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66068	   2432	  22636	  91136	  16400	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+18:02:30 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+18:03:17 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:38:16: warning: variable 'angle' set but not used [-Wunused-but-set-variable]
+  double gData, angle;
+                ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66068	   2432	  22636	  91136	  16400	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+18:03:30 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+18:04:51 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64668	   2424	  22636	  89728	  15e80	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+18:04:58 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+18:06:59 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66068	   2432	  22636	  91136	  16400	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+18:07:07 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+18:07:49 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:120:25: error: expected ')' before ';' token
+     angle = asin((gData);
+                         ^
+../src/helloworld.c:132:4: error: expected ';' before '}' token
+    }
+    ^
+../src/helloworld.c:38:16: warning: variable 'angle' set but not used [-Wunused-but-set-variable]
+  double gData, angle;
+                ^
+make: *** [src/helloworld.o] Error 1
+18:07:55 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66068	   2432	  22636	  91136	  16400	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+18:08:02 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+18:09:39 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:122:5: error: expected ';' before 'printf'
+     printf("x-axis:%fg\r\n", angle);
+     ^
+make: *** [src/helloworld.o] Error 1
+18:09:42 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66068	   2432	  22636	  91136	  16400	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+18:09:54 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+18:13:09 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67036	   2432	  22636	  92104	  167c8	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+18:13:19 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+18:14:12 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66068	   2432	  22636	  91136	  16400	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+18:14:26 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67036	   2432	  22636	  92104	  167c8	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+18:14:35 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:04:17 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:04:29 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:07:57 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67036	   2432	  22636	  92104	  167c8	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:08:05 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:13:53 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:15:08 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:130:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+     printf("z-axis:%fg\r\n", rawData);
+     ^
+../src/helloworld.c:130:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67036	   2432	  22636	  92104	  167c8	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:15:21 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:15:50 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67036	   2432	  22636	  92104	  167c8	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:15:57 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:21:50 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67100	   2432	  22636	  92168	  16808	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:22:06 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:24:30 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67100	   2432	  22636	  92168	  16808	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:24:46 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:25:09 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67100	   2432	  22636	  92168	  16808	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:25:20 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:28:21 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:128:5: error: 'gDate' undeclared (first use in this function)
+     gDate = (gData>1)? 0: gData;
+     ^
+../src/helloworld.c:128:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+10:28:45 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67100	   2432	  22636	  92168	  16808	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:29:24 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67100	   2432	  22636	  92168	  16808	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:29:52 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67100	   2432	  22636	  92168	  16808	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:29:59 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:39:43 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67100	   2432	  22636	  92168	  16808	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:40:05 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66196	   2432	  22636	  91264	  16480	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:40:14 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:50:33 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:132:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     if (i = 20){
+     ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66260	   2432	  22636	  91328	  164c0	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:50:44 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66324	   2432	  22636	  91392	  16500	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:50:52 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:51:32 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66324	   2432	  22636	  91392	  16500	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:51:41 **** Incremental Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:00:01 **** Build of project accelerometer_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_0/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_0/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v4_2/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_0/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_0/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v4_2/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+10:01:37 **** Build of configuration Debug for project accelerometer ****
+make all 
+make: Nothing to be done for `all'.
+10:21:32 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66324	   2432	  22636	  91392	  16500	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:25:38 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66324	   2432	  22636	  91392	  16500	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:26:09 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66324	   2432	  22636	  91392	  16500	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:29:22 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66324	   2432	  22636	  91392	  16500	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:49:12 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66324	   2432	  22636	  91392	  16500	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+10:49:18 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66324	   2432	  22636	  91392	  16500	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '

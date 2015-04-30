@@ -1,0 +1,21 @@
+10:49:18 **** Auto Build of configuration Debug for project accelerometer ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../accelerometer_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: accelerometer.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../accelerometer_bsp/ps7_cortexa9_0/lib -o "accelerometer.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accelerometer.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size accelerometer.elf  |tee "accelerometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66324	   2432	  22636	  91392	  16500	accelerometer.elf
+'Finished building: accelerometer.elf.size'
+' '
+
+10:49:23 Build Finished (took 5s.185ms)
+

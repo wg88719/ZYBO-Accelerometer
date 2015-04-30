@@ -1,0 +1,141 @@
+//free software under the LGPL
+
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xil_io.h"
+#include "xscutimer.h"
+#include "xil_printf.h"
+#include "xgpio.h"
+#include "math.h"
+
+#define CE_ID				XPAR_CE_DEVICE_ID
+#define AXIS_DATA_ID		XPAR_AXIS_DATA_DEVICE_ID
+#define AXIS_SW_ID			XPAR_AXIS_SW_DEVICE_ID
+#define BTN_ID 				XPAR_BTN_DEVICE_ID
+#define RST_ID				XPAR_RST_DEVICE_ID
+#define SW_ID				XPAR_SW_DEVICE_ID
+#define TIMER_DEVICE_ID		XPAR_XSCUTIMER_0_DEVICE_ID
+#define TIMER_LOAD_VALUE	65
+
+
+
+int main()
+{
+    init_platform();
+
+    XScuTimer Timer;
+    XGpio ce, axis_data, axis_sw, btn, rst, sw;
+
+	//setup of the timer
+    XScuTimer_Config *TimerConfigPtr;
+    XScuTimer *TimerInstancePtr = &Timer;
+    TimerConfigPtr = XScuTimer_LookupConfig(TIMER_DEVICE_ID);
+
+	int status, readFlag, switchVal;
+	int16_t rawData = 0;
+	float res = .003921568627;
+	double gData, angle;
+
+	status = XGpio_Initialize(&btn, BTN_ID);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&sw, SW_ID);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&ce, CE_ID);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&axis_data, AXIS_DATA_ID);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&axis_sw, AXIS_SW_ID);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&rst, RST_ID);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	status = XScuTimer_CfgInitialize(&Timer, TimerConfigPtr, TimerConfigPtr->BaseAddr);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	XScuTimer_LoadTimer(TimerInstancePtr, TIMER_LOAD_VALUE);
+
+	   	//enable auto-reload
+	XScuTimer_EnableAutoReload(TimerInstancePtr);
+
+	XScuTimer_Start(TimerInstancePtr);
+
+	while(1){
+
+		switchVal = XGpio_DiscreteRead(&sw, 1);
+
+		XGpio_DiscreteWrite(&rst, 1, XGpio_DiscreteRead(&btn, 1));
+		XGpio_DiscreteWrite(&axis_sw, 1, switchVal);
+
+		readFlag = 0;
+
+		if (XGpio_DiscreteRead(&ce, 1) == 0){
+
+			XScuTimer_LoadTimer(TimerInstancePtr, TIMER_LOAD_VALUE);
+
+			while (XGpio_DiscreteRead(&ce, 1) == 0){
+
+				if (XScuTimer_IsExpired(TimerInstancePtr)){
+
+					rawData = XGpio_DiscreteRead(&axis_data, 1);
+
+					readFlag = 1;
+
+					XScuTimer_ClearInterruptStatus(TimerInstancePtr);
+				}
+
+			}
+
+		}
+
+		if (readFlag == 1){
+
+			if (rawData < 512){
+				gData = rawData * res;
+			}else{
+				gData = (512 - rawData) * res;
+			}
+
+			switch(switchVal){
+			case 0:
+				angle = asin(.707);
+				printf("x-axis:%fg\r\n", angle);
+				break;
+			case 1:
+				printf("y-axis:%fg\r\n", gData);
+				break;
+			case 2:
+				printf("z-axis:%fg\r\n", gData);
+				break;
+			default:
+				printf("x-axis:%fg\r\n", gData);
+				break;
+			}
+
+			readFlag = 0;
+		}
+
+	}
+
+    cleanup_platform();
+    return 0;
+}

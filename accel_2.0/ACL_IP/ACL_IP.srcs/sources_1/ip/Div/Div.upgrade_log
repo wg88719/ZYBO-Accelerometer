@@ -1,0 +1,103 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
+| Date         : Mon Apr 20 17:35:22 2015
+| Host         : liesel running 64-bit Manjaro Linux
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Div'
+
+1. Summary
+----------
+
+SUCCESS in the update of Div (xilinx.com:ip:div_gen:5.1 (Rev. 5)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
+| Date         : Mon Apr 20 17:14:17 2015
+| Host         : liesel running 64-bit Manjaro Linux
+| Command      : upgrade_ip
+| Device       : xc7z010iclg225-1L
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Div'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Div from xilinx.com:ip:div_gen:3.0 to xilinx.com:ip:div_gen:5.1 (Rev. 5)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Warnings
+-----------
+
+WARNING: Migration from v3.0 also requires pin name changes. See the core datasheet for full instructions on migration.
+
+3. Upgrade messages
+-------------------
+
+Renamed parameter ce to ACLKEN
+Renamed parameter sclr to ARESETn
+Removed parameter sclr_ce_priority
+Added parameter dividend_has_tlast with value false
+Added parameter divisor_has_tlast with value false
+Added parameter dividend_has_tuser with value false
+Added parameter divisor_has_tuser with value false
+Added parameter dividend_tuser_width with value 1
+Added parameter divisor_tuser_width with value 1
+Added parameter FlowControl with value NonBlocking
+Added parameter OutTLASTBehv with value Null
+Added parameter OptimizeGoal with value Resources
+Added parameter OutTready with value false
+
+4. Customization warnings
+-------------------------
+
+WARNING: An attempt to modify the value of disabled parameter 'OptimizeGoal' from 'Performance' to 'Resources' has been ignored for IP 'Div'
+
+
+5. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  Please consult the warnings from the previous sections, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:div_gen:5.1 -user_name Div
+set_property -dict "\
+  CONFIG.aclken false \
+  CONFIG.algorithm_type Radix2 \
+  CONFIG.dividend_and_quotient_width 15 \
+  CONFIG.divisor_has_tlast false \
+  CONFIG.divide_by_zero_detect false \
+  CONFIG.divisor_width 8 \
+  CONFIG.dividend_tuser_width 1 \
+  CONFIG.operand_sign Unsigned \
+  CONFIG.optimizegoal Resources \
+  CONFIG.divisor_has_tuser false \
+  CONFIG.latency_configuration Automatic \
+  CONFIG.remainder_type Remainder \
+  CONFIG.outtready false \
+  CONFIG.clocks_per_division 1 \
+  CONFIG.outtlastbehv Null \
+  CONFIG.flowcontrol NonBlocking \
+  CONFIG.dividend_has_tlast false \
+  CONFIG.fractional_width 8 \
+  CONFIG.component_name Div \
+  CONFIG.latency 17 \
+  CONFIG.aresetn false \
+  CONFIG.divisor_tuser_width 1 \
+  CONFIG.dividend_has_tuser false " [get_ips Div]
+
+

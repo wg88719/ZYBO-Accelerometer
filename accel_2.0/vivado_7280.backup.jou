@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1034051 on Fri Oct  3 17:14:12 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Thu Apr 23 14:03:45 2015
+# Process ID: 9564
+# Log file: T:/accel_2.0/vivado.log
+# Journal file: T:/accel_2.0\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project T:/accel_2.0/accel.xpr
+launch_sdk -workspace T:/accel_2.0/accel.sdk -hwspec T:/accel_2.0/accel.sdk/design_1_wrapper.hdf
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210279572471A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210279572471A]
+open_hw_target
+set_property PROGRAM.FILE {T:/accel_2.0/accel.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {T:/accel_2.0/accel.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {T:/accel_2.0/accel.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {T:/accel_2.0/accel.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+launch_sdk -workspace T:/accel_2.0/accel.sdk -hwspec T:/accel_2.0/accel.sdk/design_1_wrapper.hdf
+launch_sdk -workspace T:/accel_2.0/accel.sdk -hwspec T:/accel_2.0/accel.sdk/design_1_wrapper.hdf
+launch_sdk -workspace T:/accel_2.0/accel.sdk -hwspec T:/accel_2.0/accel.sdk/design_1_wrapper.hdf

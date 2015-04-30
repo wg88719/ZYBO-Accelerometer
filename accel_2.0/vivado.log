@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1034051 on Fri Oct  3 17:14:12 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Wed Apr 29 10:10:03 2015
+# Process ID: 10044
+# Log file: T:/accel_2.0/vivado.log
+# Journal file: T:/accel_2.0\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project T:/accel_2.0/accel.xpr
+INFO: [Project 1-313] Project file moved from 'T:/accel' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 't:/accel_2.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.3/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:processing_system7:5.5'. The one found in IP location 't:/accel_2.0/accel.srcs/sources_1/ipshared/xilinx.com/processing_system7_v5_5/da926f63' will take precedence over the same IP in the Xilinx installed IP.
+WARNING: [BD 41-1303] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+open_project: Time (s): cpu = 00:00:37 ; elapsed = 00:00:17 . Memory (MB): peak = 737.945 ; gain = 192.402
+launch_sdk -workspace T:/accel_2.0/accel.sdk -hwspec T:/accel_2.0/accel.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace T:/accel_2.0/accel.sdk -hwspec T:/accel_2.0/accel.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 29 10:49:48 2015...

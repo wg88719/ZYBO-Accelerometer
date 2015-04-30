@@ -1,0 +1,65 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
+| Date         : Tue Apr 21 19:55:06 2015
+| Host         : liesel running 64-bit Manjaro Linux
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_PmodACL_Demo_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_PmodACL_Demo_1_0 (pct.edu:user:PmodACL_Demo:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'design_1_PmodACL_Demo_1_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'xOut'
+-upgrade has removed port 'yOut'
+-upgrade has removed port 'zOut'
+-upgrade has added port 'DataOut'
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
+| Date         : Mon Apr 20 19:05:04 2015
+| Host         : liesel running 64-bit Manjaro Linux
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_PmodACL_Demo_1_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_PmodACL_Demo_1_0 (pct.edu:user:PmodACL_Demo:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'design_1_PmodACL_Demo_1_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'xAxis'
+-upgrade has removed port 'yAxis'
+-upgrade has removed port 'zAxis'
+-upgrade has added port 'xOut'
+-upgrade has added port 'yOut'
+-upgrade has added port 'zOut'
+

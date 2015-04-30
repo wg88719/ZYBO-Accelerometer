@@ -1,0 +1,54 @@
+{
+   da_board_cnt: "3",
+   da_ps7_cnt: "1",
+   guistr: "# # String gsaved with Nlview 6.4.10  2014-10-02 bk=1.3207 VDI=35 GEI=35 GUI=JA:1.8
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 70 -defaultsOSRD
+preplace port SCLK -pg 1 -y 960 -defaultsOSRD
+preplace port sw -pg 1 -y 290 -defaultsOSRD
+preplace port btn -pg 1 -y 160 -defaultsOSRD
+preplace port SS -pg 1 -y 570 -defaultsOSRD
+preplace port MISO -pg 1 -y 1010 -defaultsOSRD
+preplace port MOSI -pg 1 -y 940 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 90 -defaultsOSRD
+preplace portBus LED_1 -pg 1 -y 1020 -defaultsOSRD
+preplace inst Axis_Data -pg 1 -lvl 4 -y 690 -defaultsOSRD
+preplace inst sw -pg 1 -lvl 4 -y 290 -defaultsOSRD
+preplace inst btn -pg 1 -lvl 4 -y 160 -defaultsOSRD
+preplace inst PmodACL_Demo_1 -pg 1 -lvl 4 -y 980 -defaultsOSRD
+preplace inst rst_processing_system7_0_50M -pg 1 -lvl 1 -y 360 -defaultsOSRD
+preplace inst rst -pg 1 -lvl 4 -y 420 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 3 -y 430 -defaultsOSRD
+preplace inst CE -pg 1 -lvl 4 -y 560 -defaultsOSRD
+preplace inst axis_sw -pg 1 -lvl 4 -y 820 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y 130 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 2 3 NJ 70 NJ 70 NJ
+preplace netloc axis_sw_gpio_io_o 1 3 2 1220 890 1480
+preplace netloc processing_system7_0_axi_periph_M03_AXI 1 3 1 1170
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 3 1 1190
+preplace netloc rst_processing_system7_0_50M_interconnect_aresetn 1 1 2 NJ 380 860
+preplace netloc processing_system7_0_axi_periph_M07_AXI 1 3 1 1150
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 860
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 100 270 NJ 270 840
+preplace netloc rst_processing_system7_0_50M_peripheral_aresetn 1 1 3 NJ 400 870 700 1200
+preplace netloc btn_GPIO 1 4 1 NJ
+preplace netloc processing_system7_0_axi_periph_M02_AXI 1 3 1 N
+preplace netloc PmodACL_Demo_1_LED 1 4 1 NJ
+preplace netloc processing_system7_0_axi_periph_M06_AXI 1 3 1 1160
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 90 NJ 90 NJ
+preplace netloc PmodACL_Demo_1_SCLK 1 4 1 NJ
+preplace netloc PmodACL_Demo_1_DataOut 1 4 1 1490
+preplace netloc MISO_1 1 0 4 NJ 1010 NJ 1010 NJ 1010 NJ
+preplace netloc PmodACL_Demo_1_SS 1 4 1 1500
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 90 260 440 260 850 690 1180
+preplace netloc sw_GPIO 1 4 1 NJ
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 3 1 1150
+preplace netloc rst_gpio_io_o 1 3 2 1210 490 1500
+preplace netloc PmodACL_Demo_1_SDO 1 4 1 NJ
+levelinfo -pg 1 70 270 640 1010 1350 1520
+",
+   }
+{
+   da_axi4_cnt: "4",
+}
+0
