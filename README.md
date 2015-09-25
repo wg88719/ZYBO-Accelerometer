@@ -11,3 +11,7 @@ The actual accelerometer software was written by me and is under the LGPL v3.
 Keep in mind that the libraries used are NOT free software. However, my code is, so enjoy. 
 
 Also, there are a few files in there that aren't actually needed, they were generated when I ran the design and stuff. You can ignore them.
+
+This project basically spits out the values that the ACL measures to the SDK terminal. You can select with axis you measure with by flipping the on-board switches (on the ZYBO). The z-axis data will actually be spit out as degrees not just a coeffient of gravity.
+
+Pretty basic, but could be used to make a robot balence on a ball!
